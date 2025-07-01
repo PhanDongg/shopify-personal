@@ -1,0 +1,77 @@
+<!-- sections/demo-block-section.liquid -->
+<section class="demo-block-section">
+  <div class="container">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="blocks-container">
+      {% if section.blocks.size > 0 %}
+        {% for block in section.blocks %}
+          <div class="block-item">
+            <h3>{{ block.settings.block_heading }}</h3>
+            <p>{{ block.settings.block_text }}</p>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p>No blocks available. Add blocks in the admin panel.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<style>
+.demo-block-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.demo-block-section .blocks-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.block-item {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Demo Block Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Demo Block Section"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Text Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "block_heading",
+          "label": "Block Heading",
+          "default": "Block Title"
+        },
+        {
+          "type": "textarea",
+          "id": "block_text",
+          "label": "Block Text",
+          "default": "This is the block text."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Demo Block Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

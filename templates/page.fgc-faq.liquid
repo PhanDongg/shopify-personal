@@ -1,0 +1,54 @@
+{% style type="text/css" %}
+.fgc-faq {
+    margin-top: 50px;
+}
+.tab-toggle {
+    display: none !important;
+}
+label.tab-label {
+    background: #9faebb;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    color: #fff;
+}
+.tab-content {
+    background-color: #8d5d2e;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all .4s;
+    padding: 0 1em;
+}
+.tab-toggle:checked ~ .tab-content {
+    max-height: 100vh;
+}
+.tab-label::after {
+    content: '\276F';
+    transition: all .4s;
+}
+
+main#MainContent {
+    margin: auto;
+}
+.tab-toggle:checked ~ .tab-label::after {
+    transform: rotate(90deg);
+}
+  
+{% endstyle %}
+    <div class="fgc-faq">
+
+        <div class="tab">
+            <input type="checkbox" id="tab1" class="tab-toggle">
+            <label for="tab1" class="tab-label"> How to refund?</label>
+            <div class="tab-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ducimus consequuntur esse 
+            ullam deserunt blanditiis dignissimos vitae eum cumque totam mollitia maxime magni, error sequi aliquam laborum fuga. Tempore, rem.</div>
+        </div>
+        <div class="tab">
+            <input type="checkbox" id="tab2" class="tab-toggle">
+            <label for="tab2" class="tab-label"> How to refund?</label>
+            <div class="tab-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, repellendus
+                aliquid fugiat aspernatur porro quae magnam tempora similique</div>
+        </div>
+    </div>
+
+    

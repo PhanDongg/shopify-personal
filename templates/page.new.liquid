@@ -1,0 +1,197 @@
+
+
+{% comment %}
+{% assign newAvariable = "biến mới"  %}
+{{ newAvariable }}
+{% endcomment %}
+<h1>CHECK THỬ CÁC CÚ PHÁP CỦA LIQUID</h1>
+<h1>các phép tính</h1>
+{% assign number1 = 6  %}
+{% assign number2 = 12  %}
+<h3> phép cộng : {{ number1 | plus: number2 }}</h3>
+<h3> phép trừ : {{ number1 | minus: number2 }}</h3>
+<h3> phép nhân : {{ number1 | times: number2 }}</h3>
+<h3> phép chia : {{ number2 | divided_by: number1 }}</h3>
+
+<h1>câu lệnh điều kiện</h1>
+{% if number2 > number1 %}
+  <h3>{{ number2 }} lớn hơn {{ number1 }}</h3>
+  {% else %}
+  <h3>{{ number1 }} lớn hơn {{ number2 }}</h3>
+{% endif %}
+<h1>câu lệnh rẽ nhánh</h1>
+{% assign date = 3 %}
+{% case date %}
+  {% when 2 %}
+  <h3>hôm nay là thứ 2</h3>
+  {% when 3 %}
+  <h3>hôm nay là thứ 3</h3>
+  {% when 4 %}
+  <h3>hôm nay là thứ 4</h3>
+  {% else %}
+  <h3>dữ liệu nhập vào bị sai</h3>
+  {% endcase %}
+<h1>vòng lặp</h1>
+{% for i in (1..5) %}
+  {% if forloop.first == true %}
+    <h3>đây là số đầu tiên</h3>
+    {% else %}
+  <h3> số: {{ i }} </h3>
+    {% endif %}
+  {% endfor %}
+
+  <h1>lấy tiêu đề sản phẩm của bộ sưu tập collection new</h1>
+  {% for product in collections.new.products %}
+    <h6>tên sản phẩm: {{ product.title }}</h6>
+    <h6>thời gian tạo: {{ product.created_at }}</h6>
+    <h6>trạng thái đăng lên: {{ product.published_at }}</h6>
+     <h6>url: {{ product.url }}</h6>
+    {% endfor %}
+    
+    <hr>
+    {% unless product.title == 'Awesome Shoes' %}
+  These shoes are not awesome.
+{% endunless %}
+
+<hr>
+<!--  
+{% section 'footer' %}
+{% section 'header' %}
+-->
+{% for i in (1..5) %}
+  {% if i == 4 %}
+    {% break %}
+  {% else %}
+    {{ i }}
+  {% endif %}
+{% endfor %}
+
+<hr>
+{% for i in (1..5) %}
+  {% if i == 4 %}
+    {% continue %}
+  {% else %}
+    {{ i }}
+  {% endif %}
+{% endfor %}
+
+<br>
+chưa được ?
+{% for tag in product.tags %}
+  {{ tag }}
+{% endfor %}
+{% echo product.title %}
+{% liquid
+  echo product.price | money
+%}
+
+{% for tag in product.tags %}
+  {{ tag }}
+{% endfor %}
+
+{{ product.title }}
+{{ product.price | money }}
+
+{% liquid
+  echo expression
+%}
+
+{% echo product.title %}
+
+{% liquid
+  echo product.price | money
+%}
+
+
+{% liquid
+
+  assign product_type = product.type | downcase
+  assign message = ''
+
+  case product_type
+    when 'iphone 15 promax'
+      assign message = 'This is a health potion!'
+    when 'love'
+      assign message = 'This is a love potion!'
+    else
+      assign message = 'This is a potion!'
+  endcase
+
+  echo message
+%}
+<br>
+{% raw %}
+  {{ 2 | plus: 2 }} equals 4.
+{% endraw %}
+
+{% liquid
+  assign number = 3
+  assign mess = ''
+  case number
+  when 2
+  assign mess = 'thứ 2'
+  when 3
+  assign mess = 'thứ 3'
+  else 
+  assign mess = 'nhập sai ngày nha cu'
+  endcase
+  echo mess
+%}
+<br>
+{
+  "product": {
+    "available": true
+  }
+}
+{% if product.available %}
+  Price: $99.99
+{% else %}
+  Sorry, this product is sold out.
+{% endif %}
+
+<h1>theme tags</h1>
+{% section 'contact-form' %}
+
+<script type="text/javascript">
+  console.log('Hello, World!');
+</script>
+
+
+<style type="text/css">
+  /* CSS styles của bạn */
+h1 {
+  color: red;
+}
+</style>
+
+{% form 'currency', cart %}
+  <!-- form content -->
+  {{ form | currency_selector }}
+{% endform %}
+
+
+{% style %}
+  .h1 {
+     color: {{ settings.colors_accent_1 }};
+  }
+{% endstyle %}
+
+{% capture my_variable %}I am being captured.{% endcapture %}
+{{ my_variable }}
+
+<br>
+{% increment variable %}
+{% increment variable %}
+{% increment variable %}
+<br>
+{% decrement variable %}
+{% decrement variable %}
+{% decrement variable %}
+<br>
+{% cycle 'one', 'two', 'three' %}
+{% cycle 'one', 'two', 'three' %}
+{% cycle 'one', 'two', 'three' %}
+{% cycle 'one', 'two', 'three' %}
+<br>
+<p>fffffffff</p>
+{{ cart | item_count_for_variant: 39888235757633 }}

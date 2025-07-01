@@ -1,0 +1,53 @@
+<!-- sections/demo-section.liquid -->
+<section class="demo-section">
+  <div class="container">
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.text }}</p>
+    {% if section.settings.image != blank %}
+      <img src="{{ section.settings.image | img_url: 'medium' }}" alt="Demo Image">
+    {% endif %}
+  </div>
+</section>
+
+<style>
+.demo-section {
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+.demo-section img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+</style>
+{% schema %}
+{
+  "name": "Demo Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Welcome to the Demo Section"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Description",
+      "default": "This is a simple demo section for Shopify."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Demo Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
