@@ -53,12 +53,6 @@
           "type": "quantity_selector",
           "settings": {}
         },
-        "uploadly_file_upload_app_block_qyDkHg": {
-          "type": "shopify://apps/uploadly-file-upload/blocks/app-block/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
-          "settings": {
-            "featured_product": "{{product}}"
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -145,7 +139,6 @@
         "judge_me_reviews_preview_badge_zNajzj",
         "variant_picker",
         "quantity_selector",
-        "uploadly_file_upload_app_block_qyDkHg",
         "buy_buttons",
         "description",
         "collapsible-row-0",

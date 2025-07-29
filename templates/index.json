@@ -64,7 +64,7 @@
         "slide_C69RPY": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/iphone-15-pro-max-gia-bao-nhieu-thumbnail.webp",
+            "image": "shopify://shop_images/346055308_1281105409476220_6731175788915178784_n.jpg",
             "heading": "",
             "heading_size": "h2",
             "subheading": "",
@@ -82,7 +82,7 @@
         "slide_MJyrcR": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/ra-mat-chinh-thuc-iphone-15-pro-max-va-15-pro-co-gi-moi-0a_f0a4d7c72a7349ccb084361832d40221_1024x1024_82611485-0ba9-4cc6-9aac-d8f1cb26a232.webp",
+            "image": "shopify://shop_images/346449770_229395969721019_3348554899890377246_n.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -100,7 +100,7 @@
         "slide_gTE9MB": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/10.webp",
+            "image": "shopify://shop_images/289236549_1050473589175208_7624252979372395701_n.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -603,7 +603,7 @@
     "demo_section_Pk3NRV": {
       "type": "demo-section",
       "settings": {
-        "heading": "Welcome to the Demo Section Test Test2 Test3",
+        "heading": "Welcome to the Demo Section",
         "text": "This is a simple demo section for Shopify."
       }
     }
