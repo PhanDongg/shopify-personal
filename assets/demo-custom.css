@@ -49,3 +49,6 @@ h1.main-page-title.page-title.h0.scroll-trigger.animate--fade-in {
 .card__inner {
     border: 1px solid #d5c0c0 !important;
 }
+.test {
+    color: red;
+}
