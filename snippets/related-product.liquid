@@ -1,0 +1,165 @@
+{% comment %} <div class="section related-products-wrapper grid-container">
+  {% assign related_products = product.metafields.custom.related_product.value %}
+  {% if related_products != blank %}
+    <h3>Similar Items</h3>
+    <div class="related-product-list">
+      {% for related_product in related_products %}
+        <a href="{{ related_product.url }}">
+          <div class="related-product">
+            <div class="related-product-image">
+              <img src="{{ related_product.featured_image | img_url: 'medium' }}" alt="{{ related_product.title }}">
+            </div>
+
+            <div>
+              <div class="related-product-price">{{ related_product.price | money }}</div>
+              {%- if product.price < product.compare_at_price and product.price_varies == false -%}
+                {% assign was_including_gst = product.compare_at_price | times: 1.1 %}
+                <del class="product-tile-compare-price overline-uppercase">Was {{ was_including_gst | money }}</del>
+              {%- endif -%}
+            </div>
+
+            <div class="related-product-vendor">{{ product.vendor }}</div>
+            <div class="related-product-sku">SKU: {{ product.selected_or_first_available_variant.sku }}</div>
+            <div class="related-product-name">{{ related_product.title }}</div>
+            
+            {% assign total_inventory = 0 %}
+{% for variant in product.variants %}
+  {% if variant.inventory_quantity > 0 %}
+    {% assign total_inventory = total_inventory | plus: variant.inventory_quantity %}
+  {% endif %}
+{% endfor %}
+            {% assign total_inventory_text = total_inventory %}
+            {% if total_inventory <= 3 %}
+                {% assign total_inventory_text = 'Low Stock' %}
+            {% else %}
+                {% assign total_inventory_text = 'In Stock' %}
+            {% endif %}
+
+            {%- if total_inventory > 0 -%}
+            <div class="cell product-tile__stock">
+                <div class="flex-container align-middle">
+                {% render 'icon-tick' %}<span class="ml-10">{{ total_inventory_text }}</span>
+                </div>
+            </div>
+            {%- else -%}
+            <div class="cell product-tile_out_of_stock">
+                <div class="flex-container align-middle">
+                    {%- if dangerous_goods == true -%}
+                        {% render 'icon-warning' %}<span class="ml-10">Dangerous Goods</span>
+                    {%- endif -%}
+                    {% if is_special_order == true %}
+                        {% render 'icon-edit-alt' %}<span class="ml-10">Special Order</span>
+                    {%- elsif  product_qty <= 0 -%}
+                    {%- endif -%}
+                </div>
+            </div>
+            {%- endif -%}
+
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+<div class="related-products-dummy"></div>
+
+ {% endcomment %}
+
+
+ <div class="section related-products-wrapper grid-container">
+  {% assign related_products = product.metafields.custom.related_product.value %}
+  {% if related_products != blank %}
+    <h3>Similar Items</h3>
+    <div class="related-product-list">
+      {% for related_product in related_products %}
+
+        {%- comment -%} TÍNH TỒN KHO CHO TỪNG RELATED_PRODUCT {%- endcomment -%}
+        {% assign total_inventory = 0 %}
+        {% for variant in related_product.variants %}
+          {% if variant.inventory_quantity > 0 %}
+            {% assign total_inventory = total_inventory | plus: variant.inventory_quantity %}
+          {% endif %}
+        {% endfor %}
+
+        {% if total_inventory <= 3 and total_inventory > 0 %}
+          {% assign total_inventory_text = 'Low Stock' %}
+        {% elsif total_inventory > 0 %}
+          {% assign total_inventory_text = 'In Stock' %}
+        {% else %}
+          {% assign total_inventory_text = 'Out of Stock' %}
+        {% endif %}
+
+        <a href="{{ related_product.url }}">
+          <div class="related-product">
+            <div class="related-product-image">
+              <img src="{{ related_product.featured_image | img_url: 'medium' }}"
+                   alt="{{ related_product.title }}">
+            </div>
+
+            {% comment %} <div class="related-product-price-wrapper">
+              <div class="">
+                {% comment %} <div class="related-product-price">{{ related_product.price | money }}</div> {% endcomment %}
+                {% assign including_gst = product.price | times: 1.1 %}
+                <div class="fgc-inc-gst-wrapper">
+                  <span class="fgc-inc-gst-price">{{ including_gst | money }}</span>
+                  <span class="fgc-inc-gst-label">INC GST</span>
+                </div>
+              </div>
+
+              {%- if related_product.price < related_product.compare_at_price
+                    and related_product.price_varies == false -%}
+                {% assign was_including_gst = related_product.compare_at_price | times: 1.1 %}
+                <del class="product-tile-compare-price overline-uppercase">
+                  Was {{ was_including_gst | money }}
+                </del>
+              {%- endif -%}
+
+            </div> {% endcomment %}
+
+            <div class="related-product-price-wrapper">
+              {% assign ex_gst = related_product.price %}
+              {% assign including_gst = ex_gst | times: 1.1 %}
+
+              <div class="product-tile__price-container">
+                <span class="product-tile__price">
+
+                  <div class="fgc-inc-gst-wrapper">
+                    <span class="fgc-inc-gst-price">{{ including_gst | money }}</span>
+                    <span class="fgc-inc-gst-label">INC GST</span>
+                  </div>
+
+                  {% if related_product.price < related_product.compare_at_price
+                        and related_product.price_varies == false %}
+                    {% assign was_including_gst = related_product.compare_at_price | times: 1.1 %}
+                    <del class="product-tile-compare-price overline-uppercase">
+                      Was {{ was_including_gst | money }}
+                    </del>
+                  {% endif %}
+                </span>
+              </div>
+            </div>
+
+
+            <div class="related-product-vendor">{{ related_product.vendor }}</div>
+            <div class="related-product-sku">
+              SKU: {{ related_product.selected_or_first_available_variant.sku }}
+            </div>
+            <div class="related-product-name">{{ related_product.title }}</div>
+
+            <div class="cell product-tile__stock">
+              <div class="flex-container align-middle">
+                {% if total_inventory > 0 %}
+                  {% render 'icon-tick' %}
+                {% endif %}
+                <span class="ml-10">{{ total_inventory_text }}</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+<div class="related-products-dummy"></div>
