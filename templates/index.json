@@ -606,6 +606,24 @@
         "heading": "Welcome to the Demo Section",
         "text": "This is a simple demo section for Shopify."
       }
+    },
+    "17650096210be91dfd": {
+      "type": "apps",
+      "blocks": {
+        "algolia_ai_search_discovery_instantsearch_d7nBD3": {
+          "type": "shopify://apps/algolia-ai-search-discovery/blocks/instantsearch/57bb7f86-d5fe-4d43-96ca-3953324494cf",
+          "settings": {
+            "disable_skeleton_loader": false,
+            "custom_skeleton_mockup": ""
+          }
+        }
+      },
+      "block_order": [
+        "algolia_ai_search_discovery_instantsearch_d7nBD3"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -622,6 +640,7 @@
     "collapsible_content_gK4ADd",
     "slideshow_96Aw8p",
     "fgc_slider_swiper_FwdVxX",
-    "demo_section_Pk3NRV"
+    "demo_section_Pk3NRV",
+    "17650096210be91dfd"
   ]
 }
