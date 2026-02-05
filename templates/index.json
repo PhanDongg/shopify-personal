@@ -45,7 +45,6 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify://shop_images/ra-mat-chinh-thuc-iphone-15-pro-max-va-15-pro-co-gi-moi-0a_f0a4d7c72a7349ccb084361832d40221_1024x1024_82611485-0ba9-4cc6-9aac-d8f1cb26a232.webp",
         "image_overlay_opacity": 40,
         "image_height": "small",
         "desktop_content_position": "bottom-center",
@@ -64,7 +63,7 @@
         "slide_C69RPY": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/10.webp",
+            "image": "shopify://shop_images/10.jpg",
             "heading": "",
             "heading_size": "h2",
             "subheading": "",
@@ -82,7 +81,6 @@
         "slide_MJyrcR": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/iphone-15-pro-max-gia-bao-nhieu-thumbnail.webp",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -100,7 +98,6 @@
         "slide_gTE9MB": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/ra-mat-chinh-thuc-iphone-15-pro-max-va-15-pro-co-gi-moi-0a_f0a4d7c72a7349ccb084361832d40221_1024x1024_82611485-0ba9-4cc6-9aac-d8f1cb26a232.webp",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -269,63 +266,43 @@
       "blocks": {
         "image_zPXFf6": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/oracle-redbull-racing-logo.webp"
-          }
+          "settings": {}
         },
         "image_b8zxLk": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Profil-Picture-Naruto-Shippuden-600x600.jpg"
-          }
+          "settings": {}
         },
         "image_8rT6kn": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/le-petit-prince-logo.webp"
-          }
+          "settings": {}
         },
         "image_yQzG7E": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Hunter_Logo.webp"
-          }
+          "settings": {}
         },
         "image_eC8rcX": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/dragon-ball-super_logo.webp"
-          }
+          "settings": {}
         },
         "image_FXGAPK": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ncaa_logo.webp"
-          }
+          "settings": {}
         },
         "image_hTW4Kc": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/UFC_logo.webp"
-          }
+          "settings": {}
         },
         "image_QtApPL": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/VGM_icon_b295ae7b-20f9-4471-817c-a669fca7a2f1.webp"
-          }
+          "settings": {}
         },
         "image_b4izgH": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/my-hero-academia-icon.webp"
-          }
+          "settings": {}
         },
         "image_4Ai8c6": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/NBA_logo.webp"
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -352,7 +329,6 @@
         "column_tBrV7e": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/453315414_1516600072562555_7621803604583096870_n.jpg",
             "title": "Column",
             "text": "<p>Huyền váy đẹp !</p>",
             "link_label": "Read more",
@@ -362,7 +338,6 @@
         "column_KzhMi3": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/383460488_1338365973719300_8038872384401701342_n.jpg",
             "title": "Column",
             "text": "<p>Huyền dáng đẹp da trắng !</p>",
             "link_label": "Read more",
@@ -372,7 +347,6 @@
         "column_nDiCba": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/430159684_1424730175082879_750041769708383981_n.jpg",
             "title": "Column",
             "text": "<p>Huyền xinh đẹp nhất quả đất</p>",
             "link_label": "Read more",
@@ -409,7 +383,6 @@
         "row_QBy39D": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/250946855_907359070153328_938870747488417531_n.jpg",
             "caption": "",
             "heading": "Multi-task, Stay connected",
             "text": "<p>AquaStand enhances versatility with an adjustable stand for your device, making it a flexible work companion.</p>",
@@ -420,7 +393,6 @@
         "row_ywWJhR": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/346449770_229395969721019_3348554899890377246_n.jpg",
             "caption": "",
             "heading": "Multi-task, Stay efficient",
             "text": "<p>Angle your iPad for comfort with a multi-angle stand. This case offers 5 modes to enhance your efficiency, providing ergonomic support for any task.</p>",
@@ -458,7 +430,6 @@
         "heading_size": "h2",
         "enable_video_looping": true,
         "video_url": "https://www.youtube.com/watch?v=8pOGt7Vjo4I&ab_channel=AppleVi%E1%BB%87tNam",
-        "cover_image": "shopify://shop_images/iphone-15-pro-max-gia-bao-nhieu-thumbnail.webp",
         "description": "",
         "full_width": false,
         "color_scheme": "scheme-1",
@@ -532,7 +503,6 @@
         "color_scheme": "",
         "container_color_scheme": "scheme-2",
         "open_first_collapsible_row": false,
-        "image": "shopify://shop_images/433238789_1440962336792996_3311880852014129478_n.jpg",
         "image_ratio": "small",
         "desktop_layout": "image_first",
         "padding_top": 36,
@@ -545,7 +515,6 @@
         "slide_hPnWN9": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/9a6c4eb2-7291-4b74-9eef-d8b03f16c91c_638275ad-17e7-4626-bfa1-0a0986bc6b8c.jpg",
             "heading": "Future Matters",
             "heading_size": "h1",
             "subheading": "From mono-material to eco-friendly packaging, RHINOSHIELD remains dedicated to our sustainability mission. Join us in creating a greener future.",
@@ -586,9 +555,7 @@
       "blocks": {
         "image_gtAzwW": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/product-card_apple-watch-protector_300x_2x_fce1edd3-7bd6-4508-b8a3-3f7949d784d3.webp"
-          }
+          "settings": {}
         }
       },
       "block_order": [
