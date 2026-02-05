@@ -623,9 +623,7 @@
         "text_MNjRiK",
         "button_fDQN33"
       ],
-      "custom_css": [
-        "# {background: #000;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/GCGD_Evolve_Website_Slices-07.webp",
