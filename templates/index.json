@@ -129,54 +129,6 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "image_with_text_eyzXzV": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_U9xArw": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text test",
-            "heading_size": "h1"
-          }
-        },
-        "text_MNjRiK": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_fDQN33": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_U9xArw",
-        "text_MNjRiK",
-        "button_fDQN33"
-      ],
-      "custom_css": [],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -673,7 +625,6 @@
       "custom_css": [],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/image.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -692,7 +643,6 @@
   "order": [
     "image_banner",
     "slideshow_M4TyjP",
-    "image_with_text_eyzXzV",
     "rich_text",
     "featured_collection_GjeBee",
     "featured_collection",
@@ -705,6 +655,7 @@
     "slideshow_96Aw8p",
     "fgc_slider_swiper_FwdVxX",
     "demo_section_Pk3NRV",
-    "17650096210be91dfd"
+    "17650096210be91dfd",
+    "image_with_text_eyzXzV"
   ]
 }
