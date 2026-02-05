@@ -624,7 +624,7 @@
         "button_fDQN33"
       ],
       "custom_css": [
-        "#{background-color: #000;}"
+        ".section-template--26369407287595__image_with_text_eyzXzV-padding.gradient.color-scheme-1 {background: #000;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
