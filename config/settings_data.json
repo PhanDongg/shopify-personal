@@ -250,6 +250,24 @@
         "type": "shopify://apps/buddha-mega-menu-navigation/blocks/megamenu/dbb4ce56-bf86-4830-9b3d-16efbef51c6f",
         "disabled": false,
         "settings": {}
+      },
+      "18387101310985349768": {
+        "type": "shopify://apps/progus-store-locator/blocks/app-embed/d7896016-8cc9-45e0-860e-ba85ba3d5be4",
+        "disabled": false,
+        "settings": {
+          "show_title": true,
+          "our_locations": "Our locations",
+          "text_color": "#ffffff",
+          "bg_color": "#000000",
+          "icon": "map-marker",
+          "icon_color": "#ffffff",
+          "size": "2",
+          "shape": "2",
+          "position": "2",
+          "tags": "",
+          "city": "",
+          "groups": ""
+        }
       }
     },
     "color_schemes": {
